@@ -129,37 +129,3 @@ function init() {
       // Use Plotly to plot the data with the layout.
       Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
 
-// BONUS CHALLENGE
-// Create the trace for the gauge chart.
-      let gaugeData = [{
-          domain: { x: [0, 1], y: [0, 1] },
-          value: wfreq,
-          type: "indicator",
-          mode: "gauge+number",
-          title: { text: "Belly Button Washing Frequency <br>Scrubs per Week " },
-          gauge: {
-            axis: {range:[null,10],tickwidth:2},
-            steps: [
-              { range: [0, 2], color: "gainsboro" },
-              { range: [2, 4], color: "lightskyblue" },
-              { range: [4, 6], color: "slategrey" },
-              { range: [6, 8], color: "cornflowerblue" },
-              { range: [8, 10], color: "royalblue" },
-            ]
-  
-          }
-      }];
-      
-      // Create the layout for the gauge chart.
-      let gaugeLayout = { 
-        width: 450, 
-        height: 445,
-        margin: { t: 0, b: 0 }
-      };
-  
-      // Use Plotly to plot the gauge data and layout.
-      Plotly.newPlot("gauge", gaugeData, gaugeLayout );
-  
-
-    });
-  }
